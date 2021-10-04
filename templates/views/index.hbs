@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+  {{>header}}
+</head>
+
+<body>
+  <div class="div">
+    <div class="col col-md-8 mx-auto">
+      <h5 class="text-secondary"> {{message}} </h5>
+      <a href="/api/company" class="btn btn-primary btn-sm w-25 ">Companies</a>
+      <a href="/api/category" class="btn btn-primary btn-sm w-25 ">Categories</a>
+      <form action="/api/company" method="POST" enctype="multipart/form-data">
+        <h5 class="text-center text-danger">Company Registration Form</h5>
+        <label for="title">title</label>
+        <input type="text" name='title' class="form-control" id="title">
+        <label for="status">status</label>
+        <input type="text" class="form-control" name="status" id="status">
+        <label for="category">Category_id</label>
+        <input type="text" name="category" class="form-control" id="category">
+        <label for="description">Description</label>
+        <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+        <label for="image">Upload Image</label>
+        <input type="file" name="image" id="image" class="form-control">
+        <button type="submit" class="btn btn-primary btn-sm w-100">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  {{>footer}}
+</body>
+
+</html>
